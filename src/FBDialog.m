@@ -409,7 +409,9 @@ params   = _params;
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
     // 102 == WebKitErrorFrameLoadInterruptedByPolicyChange
-    if (!([error.domain isEqualToString:@"WebKitErrorDomain"] && error.code == 102)) {
+    if (!([error.domain isEqualToString:@"WebKitErrorDomain"] && error.code == 102)
+     && !([error.domain isEqualToString:@"NSURLErrorDomain"] && error.code == NSURLErrorCancelled)) {
+    // https://github.com/facebook/facebook-ios-sdk/pull/422
         [self dismissWithError:error animated:YES];
     }
 }
