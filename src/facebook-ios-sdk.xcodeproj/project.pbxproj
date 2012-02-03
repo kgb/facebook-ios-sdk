@@ -254,6 +254,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INSTALL_PATH = /usr/local/lib;
 				PRODUCT_NAME = facebook_ios_sdk;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -272,6 +273,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INSTALL_PATH = /usr/local/lib;
 				PRODUCT_NAME = facebook_ios_sdk;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
